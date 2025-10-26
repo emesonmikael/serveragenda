@@ -1,0 +1,11 @@
+{
+  "config": {
+    "startTime": "07:00",
+    "endTime": "16:00",
+    "defaultDuration": 60,
+    "daysOfWeek": [1,2,3,4,5],
+    "blockedDates": [],
+    "adminPassword": "1234"
+  },
+  "bookings": []
+}
