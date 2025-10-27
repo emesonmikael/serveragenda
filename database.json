@@ -35,6 +35,17 @@
       "duration": 60,
       "status": "confirmed",
       "createdAt": "2025-10-27T00:50:57.633Z"
+    },
+    {
+      "id": "02e8e480-1cac-4634-99e9-a06f414b5a0e",
+      "nome": "katia",
+      "telefone": "84999558001",
+      "servico": "mao e pe",
+      "data": "2025-10-29",
+      "hora": "13:00",
+      "duration": 60,
+      "status": "confirmed",
+      "createdAt": "2025-10-27T01:32:26.204Z"
     }
   ]
 }

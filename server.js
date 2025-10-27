@@ -10,7 +10,11 @@ const PORT = process.env.PORT || 3000;
 const ADMIN_PASSWORD_ENV = process.env.ADMIN_PASSWORD || null;
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ["https://agenda-katia.vercel.app"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "x-admin-password"]
+}));
 app.use(express.json());
 
 // --- util: read/write DB (síncrono simples) ---
