@@ -274,6 +274,35 @@ app.delete('/agendamentos/:id', requireAdmin, (req, res) => {
 app.get('/dump', requireAdmin, (req, res) => {
   res.sendFile(DB_FILE);
 });
+// Confirmar agendamento
+app.post("/agendamentos/confirmar", (req, res) => {
+  const { data, hora } = req.body;
+  const ag = agendamentos.find(a => a.data === data && a.hora === hora);
+  if (!ag) return res.json({ ok: false, error: "Agendamento não encontrado" });
+  ag.status = "Confirmado";
+  salvarAgendamentos();
+  res.json({ ok: true });
+});
+
+// Cancelar agendamento
+app.post("/agendamentos/cancelar", (req, res) => {
+  const { data, hora } = req.body;
+  const ag = agendamentos.find(a => a.data === data && a.hora === hora);
+  if (!ag) return res.json({ ok: false, error: "Agendamento não encontrado" });
+  ag.status = "Cancelado";
+  salvarAgendamentos();
+  res.json({ ok: true });
+});
+
+// Excluir agendamento
+app.delete("/agendamentos", (req, res) => {
+  const { data, hora } = req.body;
+  const index = agendamentos.findIndex(a => a.data === data && a.hora === hora);
+  if (index === -1) return res.json({ ok: false, error: "Agendamento não encontrado" });
+  agendamentos.splice(index, 1);
+  salvarAgendamentos();
+  res.json({ ok: true });
+});
 
 // start
 app.listen(PORT, ()=> {

@@ -3,9 +3,38 @@
     "startTime": "07:00",
     "endTime": "16:00",
     "defaultDuration": 60,
-    "daysOfWeek": [1,2,3,4,5],
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
     "blockedDates": [],
     "adminPassword": "1234"
   },
-  "bookings": []
+  "bookings": [
+    {
+      "id": "718a42b6-61ad-4f46-8245-b5a8abbf56bd",
+      "nome": "eme",
+      "telefone": "84999558001",
+      "servico": "mao",
+      "data": "2025-10-27",
+      "hora": "07:00",
+      "duration": 60,
+      "status": "confirmed",
+      "createdAt": "2025-10-26T23:39:56.273Z"
+    },
+    {
+      "id": "bb1d3bbb-665d-44a8-9b28-4cdfddb6b6cc",
+      "nome": "hsdhuds",
+      "telefone": "84999558001",
+      "servico": "pe",
+      "data": "2025-10-30",
+      "hora": "11:00",
+      "duration": 60,
+      "status": "confirmed",
+      "createdAt": "2025-10-27T00:50:57.633Z"
+    }
+  ]
 }
