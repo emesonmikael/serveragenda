@@ -11,7 +11,7 @@ const ADMIN_PASSWORD_ENV = process.env.ADMIN_PASSWORD || null;
 
 const app = express();
 app.use(cors({
-  origin: ["https://agenda-katia.vercel.app"],
+  origin: ["https://agendakatia.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "x-admin-password"]
 }));
